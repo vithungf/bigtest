@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+
+    function top3(arr) {
+        for (let i = 0; i < arr.length-1; i++) {
+            for(let j = i+1; j < arr.length; j++) {
+                if(arr[i] > arr[j]) {
+                    let tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+        }
+        for (let k = 0; k < arr.length; k++) {
+         document.write(arr[k] + ',')
+        }
+        document.write('<br>');
+        document.write('Điểm thi cao thứ 3: ' + arr[arr.length - 3]);
+    }
+    let arr1 = [4,15 ,8 ,80 ,26 ,11,44,14 ];
+    top3(arr1);
+
+</script>
+</body>
+</html>
